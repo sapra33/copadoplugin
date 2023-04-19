@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.jdt.ui.JavaPerspective">
+         <view
+               id="com.copado.copadoplugin.views.CopadoPlugin"
+               ratio="0.5"
+               relationship="right"
+               relative="org.eclipse.ui.views.ProblemView">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="contexts.xml">
+      </contexts>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="com.copado.copadoplugin"
+            name="Copado Plugin">
+      </category>
+      <view
+            category="com.copado.copadoplugin"
+            class="com.copado.copadoplugin.views.CopadoPlugin"
+            icon="icons/sample.png"
+            id="com.copado.copadoplugin.views.CopadoPlugin"
+            inject="true"
+            name="Git Operations">
+      </view>
+   </extension>
+
+</plugin>
